@@ -1,247 +1,267 @@
-const keysRu = { 
-  'Digit1' : {
+const keysRu = {
+  Digit1: {
     value: '1',
     shiftValue: '!',
-  }, 
-  'Digit2' : {
+  },
+  Digit2: {
     value: '2',
     shiftValue: '"',
-  }, 
-  'Digit3' : {
+  },
+  Digit3: {
     value: '3',
     shiftValue: '№',
-  }, 
-  'Digit4' :  { 
+  },
+  Digit4: {
     value: '4',
     shiftValue: ';',
-  }, 
-  'Digit5': {
+  },
+  Digit5: {
     value: '5',
     shiftValue: '%',
   },
-  'Digit6': {
+  Digit6: {
     value: '6',
     shiftValue: ':',
   },
-  'Digit7': {
+  Digit7: {
     value: '7',
     shiftValue: '?',
   },
-  'Digit8': {
+  Digit8: {
     value: '8',
     shiftValue: '*',
   },
-  'Digit9': {
+  Digit9: {
     value: '9',
     shiftValue: '(',
   },
-  'Digit0': {
+  Digit0: {
     value: '0',
     shiftValue: ')',
   },
-  'KeyA': {
+  KeyA: {
     value: 'ф',
     shiftValue: 'Ф',
   },
-  'KeyB': {
+  KeyB: {
     value: 'и',
     shiftValue: 'И',
   },
-  'KeyC': {
+  KeyC: {
     value: 'с',
     shiftValue: 'С',
   },
-  'KeyD': {
+  KeyD: {
     value: 'в',
     shiftValue: 'В',
   },
-  'KeyE': {
+  KeyE: {
     value: 'у',
     shiftValue: 'У',
   },
-  'KeyF': {
+  KeyF: {
     value: 'а',
     shiftValue: 'А',
   },
-  'KeyG': {
+  KeyG: {
     value: 'п',
     shiftValue: 'П',
   },
-  'KeyJ': {
+  KeyJ: {
     value: 'о',
     shiftValue: 'О',
   },
-  'KeyH': {
+  KeyH: {
     value: 'р',
     shiftValue: 'Р',
   },
-  'KeyK': {
+  KeyK: {
     value: 'л',
     shiftValue: 'Л',
   },
-  'KeyL': {
+  KeyL: {
     value: 'д',
     shiftValue: 'Д',
   },
-  'KeyM': {
+  KeyM: {
     value: 'ь',
     shiftValue: 'Ь',
   },
-  'KeyI': {
+  KeyI: {
     value: 'ш',
     shiftValue: 'Ш',
   },
-  'KeyU': {
+  KeyU: {
     value: 'г',
     shiftValue: 'Г',
   },
-  'KeyS': {
+  KeyS: {
     value: 'ы',
     shiftValue: 'Ы',
   },
-  'KeyN': {
+  KeyN: {
     value: 'т',
     shiftValue: 'Т',
   },
-  'KeyO': {
+  KeyO: {
     value: 'щ',
     shiftValue: 'Щ',
   },
-  'KeyP': {
+  KeyP: {
     value: 'з',
     shiftValue: 'З',
   },
-  'KeyV': {
+  KeyV: {
     value: 'м',
     shiftValue: 'М',
   },
-  'KeyT': {
+  KeyT: {
     value: 'е',
     shiftValue: 'Е',
   },
-  'KeyR': {
+  KeyR: {
     value: 'к',
     shiftValue: 'К',
   },
-  'KeyW': {
+  KeyW: {
     value: 'ц',
     shiftValue: 'W',
   },
-  'KeyQ': {
+  KeyQ: {
     value: 'й',
     shiftValue: 'Й',
   },
-  'KeyX': {
+  KeyX: {
     value: 'ч',
     shiftValue: 'Ч',
   },
-  'KeyY': {
+  KeyY: {
     value: 'н',
     shiftValue: 'Н',
   },
-  'KeyZ': {
+  KeyZ: {
     value: 'я',
     shiftValue: 'Я',
   },
-  'Backquote': {
+  Backquote: {
     value: 'ё',
     shiftValue: 'Ё',
   },
-  'Minus': {
+  Minus: {
     value: '-',
     shiftValue: '_',
   },
-  'Equal': {
+  Equal: {
     value: '=',
     shiftValue: '+',
   },
-  'Backslash': {
+  Backslash: {
     value: '\x2F',
     shiftValue: '/',
   },
-  'Backspace': {
-    value: '',
-    shiftValue: '',
+  Backspace: {
+    value: 'Backspace',
+    shiftValue: 'Backspace',
   },
-  'Tab': {
-    value: '',
-    shiftValue: '',
+  Tab: {
+    value: 'Tab',
+    shiftValue: 'Tab',
   },
-  'BracketLeft': {
+  BracketLeft: {
     value: 'х',
     shiftValue: 'Х',
   },
-  'BracketRight': {
+  BracketRight: {
     value: 'ъ',
     shiftValue: 'Ъ',
   },
-  'Enter': {
-    value: '',
-    shiftValue: '',
+  Enter: {
+    value: 'Enter',
+    shiftValue: 'Enter',
   },
-  'CapsLock': {
-    value: '',
-    shiftValue: '',
+  CapsLock: {
+    value: 'CapsLock',
+    shiftValue: 'CapsLock',
   },
-  'Semicolon': {
+  Semicolon: {
     value: ';',
     shiftValue: ':',
   },
-  'ShiftLeft': {
-    value: '',
-    shiftValue: '',
+  ShiftLeft: {
+    value: 'Shift',
+    shiftValue: 'Shift',
   },
-  'Comma': {
+  Comma: {
     value: 'б',
     shiftValue: 'Б',
   },
-  'Period': {
+  Period: {
     value: 'ю',
     shiftValue: 'Ю',
   },
-  'Slash': {
+  Slash: {
     value: '.',
     shiftValue: ',',
   },
-  'ShiftRight': {
+  ShiftRight: {
+    value: 'Shift',
+    shiftValue: 'Shift',
+  },
+  ControlLeft: {
+    value: 'Ctrl',
+    shiftValue: 'Ctrl',
+  },
+  MetaLeft: {
+    value: 'Win',
+    shiftValue: 'Win',
+  },
+  AltLeft: {
+    value: 'Alt',
+    shiftValue: 'Alt',
+  },
+  Space: {
     value: '',
     shiftValue: '',
   },
-  'ControlLeft': {
+  AltRight: {
+    value: 'Alt',
+    shiftValue: 'Alt',
+  },
+  MetaRight: {
+    value: 'Win',
+    shiftValue: 'Win',
+  },
+  ContextMenu: {
     value: '',
     shiftValue: '',
   },
-  'MetaLeft': {
-    value: '',
-    shiftValue: '',
+  ControlRight: {
+    value: 'Ctrl',
+    shiftValue: 'Ctrl',
   },
-  'AltLeft': {
-    value: '',
-    shiftValue: '',
-  },
-  'Space': {
-    value: ' ',
-    shiftValue: ' ',
-  },
-  'AltRight': {
-    value: '',
-    shiftValue: '',
-  },
-  'MetaRight': {
-    value: '',
-    shiftValue: '',
-  },
-  'ContextMenu': {
-    value: '',
-    shiftValue: '',
-  },
-  'ControlRight': {
-    value: '',
-    shiftValue: '',
-  },
-  'Quote': {
+  Quote: {
     value: 'э',
     shiftValue: 'Э',
+  },
+  ArrowUp: {
+    value: '▲',
+    shiftValue: '▲',
+  },
+  ArrowLeft: {
+    value: '◄',
+    shiftValue: '◄',
+  },
+  ArrowRight: {
+    value: '►',
+    shiftValue: '►',
+  },
+  ArrowDown: {
+    value: '▼',
+    shiftValue: '▼',
+  },
+  Del: {
+    value: 'Del',
+    shiftValue: 'Del',
   },
 };
 

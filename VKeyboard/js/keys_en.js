@@ -1,248 +1,267 @@
-const keysEn = { 
-  'Digit1' : {
+const keysEn = {
+  Digit1: {
     value: '1',
     shiftValue: '!',
-  }, 
-  'Digit2' : {
+  },
+  Digit2: {
     value: '2',
     shiftValue: '@',
-  }, 
-  'Digit3' : {
+  },
+  Digit3: {
     value: '3',
     shiftValue: '#',
-  }, 
-  'Digit4' :  { 
+  },
+  Digit4: {
     value: '4',
     shiftValue: '$',
-  }, 
-  'Digit5': {
+  },
+  Digit5: {
     value: '5',
     shiftValue: '%',
   },
-  'Digit6': {
+  Digit6: {
     value: '6',
     shiftValue: '^',
   },
-  'Digit7': {
+  Digit7: {
     value: '7',
     shiftValue: '&',
   },
-  'Digit8': {
+  Digit8: {
     value: '8',
     shiftValue: '*',
   },
-  'Digit9': {
+  Digit9: {
     value: '9',
     shiftValue: '(',
   },
-  'Digit0': {
+  Digit0: {
     value: '0',
     shiftValue: ')',
   },
-  'KeyA': {
+  KeyA: {
     value: 'a',
     shiftValue: 'A',
   },
-  'KeyB': {
+  KeyB: {
     value: 'b',
     shiftValue: 'B',
   },
-  'KeyC': {
+  KeyC: {
     value: 'c',
     shiftValue: 'C',
   },
-  'KeyD': {
+  KeyD: {
     value: 'd',
     shiftValue: 'D',
   },
-  'KeyE': {
+  KeyE: {
     value: 'e',
     shiftValue: 'E',
   },
-  'KeyF': {
+  KeyF: {
     value: 'f',
     shiftValue: 'F',
   },
-  'KeyG': {
+  KeyG: {
     value: 'g',
     shiftValue: 'G',
   },
-  'KeyJ': {
+  KeyJ: {
     value: 'j',
     shiftValue: 'J',
   },
-  'KeyH': {
+  KeyH: {
     value: 'h',
     shiftValue: 'H',
   },
-  'KeyK': {
+  KeyK: {
     value: 'k',
     shiftValue: 'K',
   },
-  'KeyL': {
+  KeyL: {
     value: 'l',
     shiftValue: 'L',
   },
-  'KeyM': {
+  KeyM: {
     value: 'm',
     shiftValue: 'M',
   },
-  'KeyI': {
+  KeyI: {
     value: 'i',
     shiftValue: 'I',
   },
-  'KeyU': {
+  KeyU: {
     value: 'u',
     shiftValue: 'U',
   },
-  'KeyS': {
+  KeyS: {
     value: 's',
     shiftValue: 'S',
   },
-  'KeyN': {
+  KeyN: {
     value: 'n',
     shiftValue: 'N',
   },
-  'KeyO': {
+  KeyO: {
     value: 'o',
     shiftValue: 'O',
   },
-  'KeyP': {
+  KeyP: {
     value: 'p',
     shiftValue: 'P',
   },
-  'KeyV': {
+  KeyV: {
     value: 'v',
     shiftValue: 'V',
   },
-  'KeyT': {
+  KeyT: {
     value: 't',
     shiftValue: 'T',
   },
-  'KeyR': {
+  KeyR: {
     value: 'r',
     shiftValue: 'R',
   },
-  'KeyW': {
+  KeyW: {
     value: 'w',
     shiftValue: 'W',
   },
-  'KeyQ': {
+  KeyQ: {
     value: 'q',
     shiftValue: 'Q',
   },
-  'KeyX': {
+  KeyX: {
     value: 'x',
     shiftValue: 'X',
   },
-  'KeyY': {
+  KeyY: {
     value: 'y',
     shiftValue: 'Y',
   },
-  'KeyZ': {
+  KeyZ: {
     value: 'z',
     shiftValue: 'Z',
   },
-  'Backquote': {
+  Backquote: {
     value: '`',
     shiftValue: '~',
   },
-  'Minus': {
+  Minus: {
     value: '-',
     shiftValue: '_',
   },
-  'Equal': {
+  Equal: {
     value: '=',
     shiftValue: '+',
   },
-  'Backslash': {
+  Backslash: {
     value: '\x2F',
     shiftValue: '|',
   },
-  'Backspace': {
-    value: '',
-    shiftValue: '',
+  Backspace: {
+    value: 'Backspace',
+    shiftValue: 'Backspace',
   },
-  'Tab': {
-    value: '',
-    shiftValue: '',
+  Tab: {
+    value: 'Tab',
+    shiftValue: 'Tab',
   },
-  'BracketLeft': {
+  BracketLeft: {
     value: '[',
     shiftValue: '{',
   },
-  'BracketRight': {
+  BracketRight: {
     value: ']',
     shiftValue: '}',
   },
-  'Enter': {
-    value: '',
-    shiftValue: '',
+  Enter: {
+    value: 'Enter',
+    shiftValue: 'Enter',
   },
-  'CapsLock': {
-    value: '',
-    shiftValue: '',
+  CapsLock: {
+    value: 'CapsLock',
+    shiftValue: 'CapsLock',
   },
-  'Semicolon': {
+  Semicolon: {
     value: ';',
     shiftValue: ':',
   },
-  'ShiftLeft': {
-    value: '',
-    shiftValue: '',
+  ShiftLeft: {
+    value: 'Shift',
+    shiftValue: 'Shift',
   },
-  'Comma': {
+  Comma: {
     value: ',',
     shiftValue: '<',
   },
-  'Period': {
+  Period: {
     value: '.',
     shiftValue: '>',
   },
-  'Slash': {
+  Slash: {
     value: '/',
     shiftValue: '?',
   },
-  'ShiftRight': {
+  ShiftRight: {
+    value: 'Shift',
+    shiftValue: 'Shift',
+  },
+  ControlLeft: {
+    value: 'Ctrl',
+    shiftValue: 'Ctrl',
+  },
+  MetaLeft: {
+    value: 'Win',
+    shiftValue: 'Win',
+  },
+  AltLeft: {
+    value: 'Alt',
+    shiftValue: 'Alt',
+  },
+  Space: {
     value: '',
     shiftValue: '',
   },
-  'ControlLeft': {
+  AltRight: {
+    value: 'Alt',
+    shiftValue: 'Alt',
+  },
+  MetaRight: {
+    value: 'Win',
+    shiftValue: 'Win',
+  },
+  ContextMenu: {
     value: '',
     shiftValue: '',
   },
-  'MetaLeft': {
-    value: '',
-    shiftValue: '',
+  ControlRight: {
+    value: 'Ctrl',
+    shiftValue: 'Ctrl',
   },
-  'AltLeft': {
-    value: '',
-    shiftValue: '',
-  },
-  'Space': {
-    value: ' ',
-    shiftValue: ' ',
-  },
-  'AltRight': {
-    value: '',
-    shiftValue: '',
-  },
-  'MetaRight': {
-    value: '',
-    shiftValue: '',
-  },
-  'ContextMenu': {
-    value: '',
-    shiftValue: '',
-  },
-  'ControlRight': {
-    value: '',
-    shiftValue: '',
-  },
-  'Quote': {
+  Quote: {
     value: '\'',
     shiftValue: '"',
   },
+  ArrowUp: {
+    value: '▲',
+    shiftValue: '▲',
+  },
+  ArrowLeft: {
+    value: '◄',
+    shiftValue: '◄',
+  },
+  ArrowRight: {
+    value: '►',
+    shiftValue: '►',
+  },
+  ArrowDown: {
+    value: '▼',
+    shiftValue: '▼',
+  },
+  Del: {
+    value: 'Del',
+    shiftValue: 'Del',
+  },
 };
-
 export default keysEn;
