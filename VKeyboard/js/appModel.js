@@ -109,6 +109,71 @@ let buttonsLine1 = returnButtonsLine(['Backquote','Digit1','Digit2','Digit3','Di
 buttonsLine1[buttonsLine1.length-1].classes.push('button-double-size');
 buttonsLine1[buttonsLine1.length-1].classes.push('button-dark');
 
+const contentModel = {
+		type: 'main',
+		content: '',
+		classes: ['content'],
+		children: [
+			{
+				type: 'div',
+				content: '',
+				classes: ['container'],
+				children: [
+					{
+						type: 'div',
+						content: '',
+						classes: ['content__column'],
+						children: [
+							{
+								type: 'textarea',
+								content: '',
+								classes: ['content__inputarea'],
+								children: []
+							},
+							{
+								type: 'div',
+								content: '',
+								classes: ['content__keyboard-container'],
+								children: [
+									{
+										type: 'div',
+										content: '',
+										classes: ['content__keyboard-row'],
+										children: buttonsLine1
+									},
+									{
+										type: 'div',
+										content: '',
+										classes: ['content__keyboard-row'],
+										children: buttonsLine2
+									},
+									{
+										type: 'div',
+										content: '',
+										classes: ['content__keyboard-row'],
+										children: buttonsLine3
+									},
+									{
+										type: 'div',
+										content: '',
+										classes: ['content__keyboard-row'],
+										children: buttonsLine4
+									},
+									{
+										type: 'div',
+										content: '',
+										classes: ['content__keyboard-row'],
+										children: buttonsLine5
+									}												
+								]
+							}
+						]
+					}
+				]
+			}
+		]				
+	}
+
 const footerModel = {
   type: 'footer',
   content: '',
