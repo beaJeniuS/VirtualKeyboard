@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 1260px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 20px 0px 20px 0px;
+}
+
+.header__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__title {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-size: 30px;
+  text-shadow: 1px 1px 4px #0924bb;
+  color: #041053;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.content__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content__inputarea {
+  height: 200px;
+  border: 2px solid #041053;
+  border-radius: 10px;
+  resize: none;
+  margin: 0px 0px 20px 0px;
+  
+}
+
+.content__keyboard-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #041053;
+  border-radius: 10px;
+  background-color: #041053;
+}
+
+.button__lang-en span, .button__lang-ru span{
+  user-select: none;
+}
+
+.content__keyboard-row {
+  display: flex;
+  column-gap: 10px;
+  padding: 5px 5px;
+}
+
+.footer {
+  padding: 20px 0px 20px 0px;
+}
+
+.button {
+  width: 75px;
+  height: 75px;
+  background-color: darkgray;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  color: #000000;
+}
+
+.active {
+  background-color: lightgreen;
+}
+
+.button-double-size {
+  width: 150px;
+  height: 75px;
+}
+
+.button-15-size {
+  width: 100px;
+  height: 75px;
+}
+
+.button-space {
+  width: 570px;
+  height: 75px;
+}
+
+.button-dark {
+  background-color: gray;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__title {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  text-shadow: 1px 1px 4px #0924bb;
+  margin: 10px 0px 10px 0px;
+  color: #041053;
+}
+
+.footer__text {
+  width: 50%;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  margin: 10px 0px 10px 0px;
+  text-shadow: 1px 1px 4px #0924bb;
+  color: #041053;  
+}
+
+@keyframes button-click {
+  from {
+    background-color: lightgreen;
+    color: #ffffff;
+  }
+
+  to {
+    background-color: lightgreen;
+    color: #ffffff;
+  }
+}
+
+.button-active {
+  animation-name: button-click;
+  animation-duration: .2s;
+}
