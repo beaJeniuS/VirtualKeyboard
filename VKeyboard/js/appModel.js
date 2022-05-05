@@ -109,6 +109,24 @@ let buttonsLine1 = returnButtonsLine(['Backquote','Digit1','Digit2','Digit3','Di
 buttonsLine1[buttonsLine1.length-1].classes.push('button-double-size');
 buttonsLine1[buttonsLine1.length-1].classes.push('button-dark');
 
+let buttonsLine2 = returnButtonsLine(['Tab','q','w','e','r','t','y','u','i','o','p','[',']','\x5c','Del']);
+buttonsLine2[0].classes.push('button-15-size');
+buttonsLine2[0].classes.push('button-dark');
+buttonsLine2[buttonsLine2.length-1].classes.push('button-dark');
+
+let buttonsLine3 = returnButtonsLine(['CapsLock','a','s','d','f','g','h','j','k','l',';','\'','Enter']);
+buttonsLine3[0].classes.push('button-double-size');
+buttonsLine3[0].classes.push('button-dark');
+buttonsLine3[buttonsLine3.length-1].classes.push('button-double-size');
+buttonsLine3[buttonsLine3.length-1].classes.push('button-dark');
+
+let buttonsLine4 = returnButtonsLine(['Shift','z','x','c','v','b','n','m',',','.','/','\ArrowUp','Shift']); // \u9668 \u9650 \u9658 \u9660 вместо надписей
+buttonsLine4[0].classes.push('button-double-size');
+buttonsLine4[0].classes.push('button-dark');
+buttonsLine4[buttonsLine4.length-1].classes.push('button-double-size');
+buttonsLine4[buttonsLine4.length-1].classes.push('button-dark');
+
+
 const contentModel = {
 		type: 'main',
 		content: '',
