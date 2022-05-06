@@ -49,7 +49,8 @@
   border-radius: 10px;
   resize: none;
   margin: 0px 0px 20px 0px;
-  
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
 }
 
 .content__keyboard-container {
@@ -87,6 +88,18 @@
   font-family: 'Rubik', sans-serif;
   font-size: 20px;
   color: #000000;
+  transition: all .3s;
+}
+
+.button-dark {
+  background-color: gray;
+}
+
+.button-active {
+    background-color: lightgreen;
+    color: #ffffff;
+    transform: translateY(2px);
+    transition: all .3s;
 }
 
 .active {
@@ -108,9 +121,7 @@
   height: 75px;
 }
 
-.button-dark {
-  background-color: gray;
-}
+
 
 .hidden {
   display: none;
@@ -151,9 +162,4 @@
     background-color: lightgreen;
     color: #ffffff;
   }
-}
-
-.button-active {
-  animation-name: button-click;
-  animation-duration: .2s;
 }
