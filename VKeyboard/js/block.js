@@ -1,12 +1,10 @@
 class Block {
   constructor(newBlock) {
     this.type = newBlock.type;
-    console.log(newBlock.type);
     this.element = document.createElement(this.type);
     this.element.innerText = newBlock.content;
     if (newBlock.classes !== undefined) { this.setClasses(newBlock.classes); }
     if (newBlock.children !== undefined) {
-      console.log('newBlock.children !== undefined');
       this.addChildren(newBlock.children);
     }
     if (newBlock.styles !== undefined) { this.addInlineStyles(newBlock.styles); }
