@@ -6,8 +6,8 @@ import keysRu from './js/keys_ru.js';
 // const myApp = new TaskApp();
 // myApp.init();
 let currentLang = 'en';
-const capsMode = false;
-// const shiftMode = false;
+let capsMode = false;
+const shiftMode = false;
 const pressedKeys = new Set();
 
 const BODY = document.querySelector('body');
@@ -20,6 +20,29 @@ BODY.append(startBlock.block);
 
 const SPANS = document.querySelectorAll('.button__value[en-casedown]');
 const TEXT_AREA = document.querySelector('.content__inputarea');
+
+function deleteText(keyCode) {
+  const start = TEXT_AREA.selectionStart;
+  const end = TEXT_AREA.selectionEnd;
+  let finText;
+
+  if (start === end) {
+    if (keyCode === 'Delete') {
+      finText = TEXT_AREA.value.substring(0, start) + TEXT_AREA.value.substring(end + 1);
+      TEXT_AREA.value = finText;
+      TEXT_AREA.selectionEnd = start;
+    }
+    if (keyCode === 'Backspace') {
+      finText = TEXT_AREA.value.substring(0, start - 1) + TEXT_AREA.value.substring(end);
+      TEXT_AREA.value = finText;
+      TEXT_AREA.selectionEnd = start - 1;
+    }
+  } else {
+    finText = TEXT_AREA.value.substring(0, start) + TEXT_AREA.value.substring(end);
+    TEXT_AREA.value = finText;
+    TEXT_AREA.selectionEnd = start;
+  }
+}
 
 function insertText(keyCode) {
   let text;
@@ -66,7 +89,15 @@ function highLightButtons() {
 function resetHighLightButtons() {
   const buttons = document.querySelectorAll('.button');
   buttons.forEach((el) => {
-    el.classList.remove('button-active');
+    const attr = el.getAttribute('id');
+    if (attr !== 'CapsLock') {
+      el.classList.remove('button-active');
+      console.log("attr !== 'CapsLock'");
+    }
+    if (attr === 'CapsLock' && capsMode === false) {
+      el.classList.remove('button-active');
+      console.log("attr === 'CapsLock' && capsMode === false");
+    }
   });
 }
 
@@ -104,15 +135,20 @@ document.addEventListener('keydown', (event) => {
   if (pressedKeys.has('ControlLeft') && pressedKeys.has('AltLeft')) {
     toggleLanguage();
     updateButtons();
-    // console.log(`current language - ${currentLang}`);
+  }
+
+  if (pressedKeys.has('ControlRight') && pressedKeys.has('AltRight')) {
+    toggleLanguage();
+    updateButtons();
   }
 
   switch (event.code) {
-    case 'Backspace':
+    case 'Backspace': deleteText(event.code);
       break;
-    case 'Delete':
+    case 'Delete': deleteText(event.code);
       break;
-    case 'CapsLock':
+    case 'CapsLock': capsMode = !capsMode;
+      updateButtons();
       break;
     case 'ShiftLeft':
       break;
@@ -137,7 +173,8 @@ document.addEventListener('keydown', (event) => {
 
 document.addEventListener('keyup', (event) => {
   event.preventDefault();
-  pressedKeys.delete(event.code);
+  if (event.code !== 'CapsLock') { pressedKeys.delete(event.code); }
+  if (event.code === 'CapsLock' && !capsMode) { pressedKeys.delete(event.code); }
   resetHighLightButtons();
   highLightButtons();
 });
