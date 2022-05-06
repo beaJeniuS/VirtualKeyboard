@@ -200,7 +200,7 @@ const footerModel = {
             },
             {
               type: 'p',
-              content: 'Комбинация для переключения языка: левые ctrl + alt',
+              content: 'Комбинация для переключения языка: ctrl + alt слева или справа',
               classes: ['footer__text'],
               children: [],
             },
