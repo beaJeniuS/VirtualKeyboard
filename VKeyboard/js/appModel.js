@@ -86,7 +86,7 @@ const buttonsLine1 = returnButtonsLine(['Backquote', 'Digit1', 'Digit2', 'Digit3
 buttonsLine1[buttonsLine1.length - 1].classes.push('button-double-size');
 buttonsLine1[buttonsLine1.length - 1].classes.push('button-dark');
 
-const buttonsLine2 = returnButtonsLine(['Tab', 'KeyQ', 'KeyW', 'KeyE', 'KeyR', 'KeyT', 'KeyY', 'KeyU', 'KeyI', 'KeyO', 'KeyP', 'BracketLeft', 'BracketRight', 'Backslash', 'Del']);
+const buttonsLine2 = returnButtonsLine(['Tab', 'KeyQ', 'KeyW', 'KeyE', 'KeyR', 'KeyT', 'KeyY', 'KeyU', 'KeyI', 'KeyO', 'KeyP', 'BracketLeft', 'BracketRight', 'Backslash', 'Delete']);
 buttonsLine2[0].classes.push('button-15-size');
 buttonsLine2[0].classes.push('button-dark');
 buttonsLine2[buttonsLine2.length - 1].classes.push('button-dark');
@@ -194,7 +194,7 @@ const footerModel = {
           children: [
             {
               type: 'h2',
-              content: 'Клавиатура создана в операционной системе Windows',
+              content: 'Клавиатура создана в операционной системе Windows 10',
               classes: ['footer__title'],
               children: [],
             },
