@@ -232,8 +232,8 @@ const keysEn = {
     shiftValue: 'Win',
   },
   ContextMenu: {
-    value: '',
-    shiftValue: '',
+    value: '≡',
+    shiftValue: '≡',
   },
   ControlRight: {
     value: 'Ctrl',
@@ -259,7 +259,7 @@ const keysEn = {
     value: '▼',
     shiftValue: '▼',
   },
-  Del: {
+  Delete: {
     value: 'Del',
     shiftValue: 'Del',
   },
