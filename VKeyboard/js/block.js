@@ -1,31 +1,19 @@
 class Block {
-  children = [];
-
-  textInputBlock;
-
-  // target;
-
-  constructor(parent, newBlock) {
+  constructor(newBlock) {
     this.type = newBlock.type;
+    console.log(newBlock.type);
     this.element = document.createElement(this.type);
     this.element.innerText = newBlock.content;
     if (newBlock.classes !== undefined) { this.setClasses(newBlock.classes); }
-    if (newBlock.children !== undefined) { this.addChildren(newBlock.children); }
-    if (newBlock.styles !== undefined) { this.addInlineStyles(newBlock.styles); }
-
-    if (newBlock.action) {
-      // target = document.querySelector('#inputarea');
-
-      this.element.addEventListener('click', () => {
-        this.element.classList.add('button-active');
-        // target.value +=
-      });
-
-      this.element.addEventListener('animationend', () => {
-        this.element.classList.remove('button-active');
-      });
+    if (newBlock.children !== undefined) {
+      console.log('newBlock.children !== undefined');
+      this.addChildren(newBlock.children);
     }
-    parent.append(this.element);
+    if (newBlock.styles !== undefined) { this.addInlineStyles(newBlock.styles); }
+  }
+
+  get block() {
+    return this.element;
   }
 
   setClasses(classes) {
@@ -35,14 +23,15 @@ class Block {
   }
 
   addChildren(children) {
-    children.forEach((e) => {
-      const b = new Block(this.element, e);
+    children.forEach((element) => {
+      const blockInst = new Block(element);
+      this.element.append(blockInst.block);
     });
   }
 
   addInlineStyles(styles) {
     styles.forEach((el) => {
-      this.element.setAttribute(el, el.value);
+      this.element.setAttribute(Object.keys(el)[0], el[Object.keys(el)[0]]);
     });
   }
 }
