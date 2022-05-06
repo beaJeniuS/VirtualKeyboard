@@ -1,8 +1,5 @@
 import keysEn from './keys_en.js';
 import keysRu from './keys_ru.js';
-// import getCurrentLang from './app.js'
-
-// let currentLang = getCurrentLang()
 
 const headerModel = {
   type: 'header',
@@ -32,78 +29,51 @@ const headerModel = {
   ],
 };
 
+function checkKeyCode(keyCode) {
+  switch (keyCode) {
+    case 'Backspace': return false;
+    case 'Tab': return false;
+    case 'Del': return false;
+    case 'CapsLock': return false;
+    case 'Enter': return false;
+    case 'ShiftLeft': return false;
+    case 'ShiftRight': return false;
+    case 'ArrowUp': return false;
+    case 'ArrowDown': return false;
+    case 'ArrowRight': return false;
+    case 'ArrowLeft': return false;
+    case 'ControlLeft': return false;
+    case 'ControlRight': return false;
+    case 'MetaLeft': return false;
+    case 'MetaRight': return false;
+    case 'AltLeft': return false;
+    case 'AltRight': return false;
+    case 'Space': return false;
+    case 'ContextMenu': return false;
+    default: return true;
+  }
+}
+
 function returnButtonsLine(arr = []) {
+  let attributes = [];
   const resultArr = [];
   for (let i = 0; i < arr.length; i += 1) {
+    if (checkKeyCode(arr[i])) attributes = [{ id: `${arr[i]}-value` }, { 'en-casedown': keysEn[arr[i]].value }, { 'en-caseup': keysEn[arr[i]].shiftValue }, { 'ru-casedown': keysRu[arr[i]].value }, { 'ru-caseup': keysRu[arr[i]].shiftValue }];
+    else attributes = [{ id: `${arr[i]}-value` }];
+
     resultArr.push(
       {
         type: 'div',
         content: '',
         classes: ['content__button', 'button'],
-        styles: [],
-        action: true,
+        styles: [{ id: arr[i] }],
         children: [
           {
-            type: 'div',
-            content: '',
-            classes: ['button__lang-en'],
-            children: [
-              {
-                type: 'span',
-                content: keysEn[arr[i]].value,
-                classes: ['button__value-CaseDown'],
-                children: [],
-              },
-              {
-                type: 'span',
-                content: keysEn[arr[i]].shiftValue,
-                classes: ['button__value-CaseUp', 'hidden'],
-                children: [],
-              },
-              {
-                type: 'span',
-                content: keysEn[arr[i]].shiftValue,
-                classes: ['button__value-Caps', 'hidden'],
-                children: [],
-              },
-              {
-                type: 'span',
-                content: keysEn[arr[i]].value,
-                classes: ['button__value-ShiftCaps', 'hidden'],
-                children: [],
-              },
-            ],
-          },
-          {
-            type: 'div',
-            content: '',
-            classes: ['button__lang-ru', 'hidden'],
-            children: [
-              {
-                type: 'span',
-                content: keysRu[arr[i]].value,
-                classes: ['button__value-CaseDown'],
-                children: [],
-              },
-              {
-                type: 'span',
-                content: keysRu[arr[i]].shiftValue,
-                classes: ['button__value-CaseUp', 'hidden'],
-                children: [],
-              },
-              {
-                type: 'span',
-                content: keysRu[arr[i]].shiftValue,
-                classes: ['button__value-Caps', 'hidden'],
-                children: [],
-              },
-              {
-                type: 'span',
-                content: keysRu[arr[i]].value,
-                classes: ['button__value-ShiftCaps', 'hidden'],
-                children: [],
-              },
-            ],
+            type: 'span',
+            content: keysEn[arr[i]].value,
+            classes: ['button__value'],
+            styles: attributes,
+            children: [],
           },
         ],
       },
@@ -133,7 +103,7 @@ buttonsLine4[0].classes.push('button-dark');
 buttonsLine4[buttonsLine4.length - 1].classes.push('button-double-size');
 buttonsLine4[buttonsLine4.length - 1].classes.push('button-dark');
 
-const buttonsLine5 = returnButtonsLine(['ControlLeft', 'MetaLeft', 'AltLeft', 'Space', 'AltRight', 'ArrowLeft', 'ArrowDown', 'ArrowRight', 'ControlRight']);
+const buttonsLine5 = returnButtonsLine(['ControlLeft', 'MetaLeft', 'AltLeft', 'Space', 'AltRight', 'MetaRight', 'ContextMenu', 'ArrowLeft', 'ArrowDown', 'ArrowRight', 'ControlRight']);
 for (let i = 0; i < buttonsLine5.length; i += 1) {
   if (i !== 3) {
     buttonsLine5[i].classes.push('button-dark');
