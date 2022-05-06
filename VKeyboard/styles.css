@@ -55,12 +55,12 @@
 .content__keyboard-container {
   display: flex;
   flex-direction: column;
-  border: 2px solid #041053;
+  border: 2px solid #423d65;
   border-radius: 10px;
-  background-color: #041053;
+  background-color: #423d65;
 }
 
-.button__lang-en span, .button__lang-ru span{
+.button__value{
   user-select: none;
 }
 
@@ -104,7 +104,7 @@
 }
 
 .button-space {
-  width: 570px;
+  width: 450px;
   height: 75px;
 }
 
