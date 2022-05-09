@@ -156,7 +156,7 @@ const keysEn = {
     shiftValue: '+',
   },
   Backslash: {
-    value: '\x2F',
+    value: '\\',
     shiftValue: '|',
   },
   Backspace: {
