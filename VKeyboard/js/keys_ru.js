@@ -125,7 +125,7 @@ const keysRu = {
   },
   KeyW: {
     value: 'ц',
-    shiftValue: 'W',
+    shiftValue: 'Ц',
   },
   KeyQ: {
     value: 'й',
@@ -156,7 +156,7 @@ const keysRu = {
     shiftValue: '+',
   },
   Backslash: {
-    value: '\x2F',
+    value: '\\',
     shiftValue: '/',
   },
   Backspace: {
@@ -184,8 +184,8 @@ const keysRu = {
     shiftValue: 'CapsLock',
   },
   Semicolon: {
-    value: ';',
-    shiftValue: ':',
+    value: 'ж',
+    shiftValue: 'Ж',
   },
   ShiftLeft: {
     value: 'Shift',
