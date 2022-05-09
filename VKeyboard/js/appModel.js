@@ -102,8 +102,9 @@ buttonsLine4[0].classes.push('button-double-size');
 buttonsLine4[0].classes.push('button-dark');
 buttonsLine4[buttonsLine4.length - 1].classes.push('button-double-size');
 buttonsLine4[buttonsLine4.length - 1].classes.push('button-dark');
+buttonsLine4[buttonsLine4.length - 2].classes.push('button-dark');
 
-const buttonsLine5 = returnButtonsLine(['ControlLeft', 'MetaLeft', 'AltLeft', 'Space', 'AltRight', 'MetaRight', 'ContextMenu', 'ArrowLeft', 'ArrowDown', 'ArrowRight', 'ControlRight']);
+const buttonsLine5 = returnButtonsLine(['ControlLeft', 'MetaLeft', 'AltLeft', 'Space', 'AltRight', 'MetaRight', 'ArrowLeft', 'ArrowDown', 'ArrowRight', 'ControlRight']);
 for (let i = 0; i < buttonsLine5.length; i += 1) {
   if (i !== 3) {
     buttonsLine5[i].classes.push('button-dark');
